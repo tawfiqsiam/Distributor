@@ -44,4 +44,4 @@ if (message.content === '=spotify'){
 };
 };
 });
-client.login(process.env.NjIyOTEzNzUwODYwNTYyNDky.XX6z2Q.vbnqFZ1smeW96X2Lv4F1GfH4Kaw);
+client.login(process.env.BOT_TOKEN);

@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const token = 'NjIyOTEzNzUwODYwNTYyNDky.XX6z2Q.vbnqFZ1smeW96X2Lv4F1GfH4Kaw';
 usedCommandRecently4 = new Set();
 
 client.on('ready', () =>{
@@ -20,9 +19,45 @@ client.on('message', msg => {
 });
 client.on('message', msg => {
     if (msg.content === '=support') {
-      msg.reply('If you need any help using the bot please join https://discord.gg/fa9GyVX. Once you joined do `-new` in any channel for help.');
+        let bicon = client.user.displayAvatarURL;
+        let supportembed = new Discord.RichEmbed()
+        .setDescription("Support")
+        .setColor("#15f153")
+        .setThumbnail(bicon)
+        .addField("If you need any help using the bot please join https://discord.gg/fa9GyVX. Once you joined do `-new` in any channel for help.", "Thanks for all your support!")
+        .addField("If you have any suggestions, you're welcome to join our support server!" , ";)")
+
+      msg.reply(supportembed);
     }
-  });
+});
+  client.on('message', msg => {
+    if (msg.content === '=botinfo') {
+        let bicon = client.user.displayAvatarURL;
+        let clientembed = new Discord.RichEmbed()
+        .setDescription("Bot Information")
+        .setColor("#15f153")
+        .setThumbnail (bicon)
+        .addField("Bot Name", client.user.username)
+        .addField("Created On" , client.user.createdAt)
+    
+        msg.reply(clientembed);
+    }
+});
+client.on('message', msg => {
+    if (msg.content === '=serverinfo') {
+        let sicon = msg.guild.iconURL;
+        let serverembed = new Discord.RichEmbed()
+        .setDescription("Server Information")
+        .setColor("#15f153")
+        .setThumbnail(sicon)
+        .addField("Server Name" , msg.guild.name)
+        .addField("Created On" , msg.guild.createdAt)
+        .addField("You Joined" , msg.member.joinedAt)
+        .addField("Total Members" , msg.guild.memberCount);
+
+        msg.reply(serverembed);
+    }
+});
 client.on('message', message =>{
     if (!message.guild) return;
 if (message.content === '=spotify'){

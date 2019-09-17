@@ -80,16 +80,14 @@ client.on("message", async message => {
         if (args.length < 0) 
             return msg.reply(`Nothing to say?`).then(m => m.delete(5000));
         
-        const roleColor = msg.guild.me.highestRole.hexColor;
 
         if (args[0].toLowerCase() === "embed") {
-            const embed = new RichEmbed()
-                .setDescription(args.slice(1).join(" "))
-                .setColor(roleColor === "#000000" ? "#ffffff" :  roleColorv)
+            const embed = new Discord.RichEmbed()
+                .setDescription(args.slice(1).join(" "));
 
-            msg.channel.send(embed);
+            msg.channel.reply(embed);
         } else {
-            msg.channel.send(args.join(" "));
+            msg.channel.reply(args.join(" "));
         }
     }
 });

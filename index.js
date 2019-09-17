@@ -77,7 +77,7 @@ client.on("message", async message => {
     if (cmd === "say") {
         if (msg.deletable) msg.delete();
 
-        if (args.length < 0) 
+        if (args.length < 1) 
             return msg.reply(`Nothing to say?`).then(m => m.delete(5000));
         
 

@@ -13,7 +13,7 @@ client.on('message', msg =>{
          .setDescription("Help")
          .setColor("#15f153")
          .addField("Help Center: \n __General:__ \n =invite: Invite the bot to your server \n =support: Sends you the link to the support server \n __Info:__ \n =botinfo: Shows you some info on the bot \n =serverinfo: Shows you some info of the server", "Gen Center")
-         .addField("__Gen:__ \n =spotify: Gets you a Spotify Premium account \n =crunchyroll: Gets you a Crunchyroll account" , "More stuff coming soon!")
+         .addField("__Gen:__ \n =spotify: Gets you a Spotify Premium account \n =crunchyroll: Gets you a Crunchyroll account \n =fortnite: Gets you a fortnite account" , "More stuff coming soon!")
          
          msg.reply(supportembed);
     }

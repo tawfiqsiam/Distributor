@@ -8,19 +8,19 @@ client.on('ready', () =>{
     console.log('Bot running...')
     client.user.setPresence({ game: { name: `=help | ${client.guilds.size} Servers`, type: "Playing"}});
 });
-client.on('message', message =>{
-    if (message.content === '=help'){
+client.on('message', msg =>{
+    if (msg.content === '=help'){
          let supportembed = new Discord.RichEmbed()
          .setDescription("Help")
          .setColor("#15f153")
          .addField("Help Center (commands): \n _General:_ \n =invite: Invite the bot to your server \n =support: Sends you the link to the support server \n _Gen:_ \n =spotify: Gets you a Spotify Premium account" , "More stuff coming soon!")
          
-         message.reply(supportembed);
+         msg.reply(supportembed);
     };
 });
 client.on('message', msg => {
     if (msg.content === '=invite') {
-      message.reply('Invite the bot here: https://discordapp.com/api/oauth2/authorize?client_id=622913750860562492&permissions=8&scope=bot');
+      msg.reply('Invite the bot here: https://discordapp.com/api/oauth2/authorize?client_id=622913750860562492&permissions=8&scope=bot');
     }
 });
 client.on('message', msg => {
@@ -33,7 +33,7 @@ client.on('message', msg => {
         .addField("If you need any help using the bot please join https://discord.gg/fa9GyVX. Once you joined do `-new` in any channel for help.", "Thanks for all your support!")
         .addField("If you have any suggestions, you're welcome to join our support server!" , ";)")
 
-      message.reply(supportembed);
+      msg.reply(supportembed);
     }
 });
   client.on('message', msg => {
@@ -46,7 +46,7 @@ client.on('message', msg => {
         .addField("Bot Name", client.user.username)
         .addField("Created On" , client.user.createdAt)
     
-        message.reply(clientembed);
+        msg.reply(clientembed);
     }
 });
 client.on('message', msg => {
@@ -61,7 +61,7 @@ client.on('message', msg => {
         .addField("You Joined" , msg.member.joinedAt)
         .addField("Total Members" , msg.guild.memberCount);
 
-        message.reply(serverembed);
+        msg.reply(serverembed);
     }
 });
 client.on('message', message =>{

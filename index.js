@@ -23,7 +23,7 @@ client.on('message', msg => {
          let supportembed = new Discord.RichEmbed()
          .setDescription("Invite")
          .setColor("#15f153")
-         .addField("Invite the bot here: https://discordapp.com/api/oauth2/authorize?client_id=622913750860562492&permissions=8&scope=bot", "Thank's for adding the bot!")
+         .addField("Invite the bot here: https://discordapp.com/api/oauth2/authorize?client_id=622913750860562492&permissions=8&scope=bot", "Thank you for adding the bot!")
 
          msg.reply(supportembed);
     }

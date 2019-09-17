@@ -87,6 +87,7 @@ if (message.content === '=spotify'){
     https://direct-link.net/43300/00005  If the account doesnt work it means someone already claimed it.`
     var words = string.split('\n');
     let random = words[Math.floor(Math.random()*words.length)];
+    message.reply("Check your DMs")
     message.author.send(`${random}`);
 };
 };
@@ -105,6 +106,7 @@ if (message.content === '=crunchyroll'){
     `https://filemedia.net/43300/00006  If the account doesnt work it means someone already claimed it.`
     var words = string.split('\n');
     let random = words[Math.floor(Math.random()*words.length)];
+    message.reply("Check your DMs")
     message.author.send(`${random}`);
 };
 };

@@ -73,7 +73,7 @@ client.on("message", async message => {
 
         msg.edit(`🏓 Pong!\nLatency is ${Math.floor(msg.createdTimestap - message.createdTimestap)}ms\nAPI Latency is ${Math.round(client.ping)}ms`);
     }
-
+    
     if (cmd === "say") {
         if (message.deletable) message.delete();
 

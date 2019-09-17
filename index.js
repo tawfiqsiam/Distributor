@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const token = 'NjIyOTEzNzUwODYwNTYyNDky.XX6z2Q.vbnqFZ1smeW96X2Lv4F1GfH4Kaw';
 usedCommandRecently4 = new Set();
 
 client.on('ready', () =>{

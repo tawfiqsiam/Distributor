@@ -109,4 +109,24 @@ if (message.content === '=crunchyroll'){
 };
 };
 });
+client.on('message', message =>{
+    if (!message.guild) return;
+if (message.content === '=fortnite'){
+    if (usedCommandRecently4.has(message.author.id)){
+        message.channel.send('`Cooldown.. Please let other people get accounts.`')
+    } else{
+        usedCommandRecently4.add(message.author.id);
+        setTimeout(() =>{
+            usedCommandRecently4.delete(message.author.id);
+        }, 100000)
+    var string = 
+    `https://direct-link.net/43300/00007  If the account doesnt work it means someone already claimed it.`
+    var words = string.split('\n');
+    let random = words[Math.floor(Math.random()*words.length)];
+    message.reply("Check your DMs")
+    message.author.send(`${random}`);
+       
+};
+};
+});
 client.login(process.env.BOT_TOKEN);

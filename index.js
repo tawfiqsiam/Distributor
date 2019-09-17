@@ -61,34 +61,35 @@ client.on('message', msg => {
 client.on("message", async message => {
     const prefix = "=";
 
-    if (message.author.bot) return;
-    if (!message.guild) return;
-    if (!message.content.startsWith(prefix)) return;
+    if (msg.author.bot) return;
+    if (!msg.guild) return;
+    if (!msg.content.startsWith(prefix)) return;
 
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const args = msg.content.slice(prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
 
     if (cmd === "ping") {
-        const msg = await message.channel.send(`🏓 Pinging....`);
+        const msg = await msg.channel.send(`🏓 Pinging....`);
 
-        msg.edit(`🏓 Pong!\nLatency is ${Math.floor(msg.createdTimestap - message.createdTimestap)}ms\nAPI Latency is ${Math.round(client.ping)}ms`);
+        msg.edit(`🏓 Pong!\nLatency is ${Math.floor(msg.createdTimestap - msg.createdTimestap)}ms\nAPI Latency is ${Math.round(client.ping)}ms`);
     }
     
     if (cmd === "say") {
-        if (message.deletable) message.delete();
+        if (msg.deletable) msg.delete();
 
-        if (args.length < 0) return message.reply(`Nothing to say?`).then(m => m.delete(5000));
+        if (args.length < 0) 
+            return msg.reply(`Nothing to say?`).then(m => m.delete(5000));
         
-        const roleColor = message.guild.me.highestRole.hexColor;
+        const roleColor = msg.guild.me.highestRole.hexColor;
 
         if (args[0].toLowerCase() === "embed") {
             const embed = new RichEmbed()
                 .setDescription(args.slice(1).join(" "))
                 .setColor(roleColor === "#000000" ? "#ffffff" :  roleColorv)
 
-            message.channel.send(embed);
+            msg.channel.send(embed);
         } else {
-            message.channel.send(args.join(" "));
+            msg.channel.send(args.join(" "));
         }
     }
 });

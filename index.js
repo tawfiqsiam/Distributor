@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+const token = 'NjIyOTEzNzUwODYwNTYyNDky.XYFCpw.RXImSeCN5aNI2PxXgsqAmZ6zkpA';
 usedCommandRecently4 = new Set();
 
 client.on('ready', () =>{
@@ -12,7 +13,8 @@ client.on('message', msg =>{
          let supportembed = new Discord.RichEmbed()
          .setDescription("Help")
          .setColor("#15f153")
-         .addField("Help Center: \n __General:__ \n =invite: Invite the bot to your server \n =support: Sends you the link to the support server \n __Info:__ \n =botinfo: Shows you some info on the bot \n =serverinfo: Shows you some info of the server \n __Gen:__ \n =spotify: Gets you a Spotify Premium account" , "More stuff coming soon!")
+         .addField("Help Center: \n __General:__ \n =invite: Invite the bot to your server \n =support: Sends you the link to the support server \n __Info:__ \n =botinfo: Shows you some info on the bot \n =serverinfo: Shows you some info of the server", "Gen Center")
+         .addField("__Gen:__ \n =spotify: Gets you a Spotify Premium account" , "More stuff coming soon!")
          
          msg.reply(supportembed);
     }
@@ -22,7 +24,7 @@ client.on('message', msg => {
          let supportembed = new Discord.RichEmbed()
          .setDescription("Invite")
          .setColor("#15f153")
-         .addField("Invite the bot here: https://discordapp.com/api/oauth2/authorize?client_id=622913750860562492&permissions=8&scope=bot")
+         .addField("Invite the bot here: https://discordapp.com/api/oauth2/authorize?client_id=622913750860562492&permissions=8&scope=bot", "Thank's for adding the bot!")
 
          msg.reply(supportembed);
     }

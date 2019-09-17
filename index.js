@@ -78,13 +78,31 @@ if (message.content === '=spotify'){
         usedCommandRecently4.add(message.author.id);
         setTimeout(() =>{
             usedCommandRecently4.delete(message.author.id);
-        }, 10000)
+        }, 100000)
     var string = 
     `https://filemedia.net/43300/00001 If the account doesnt work it means someone already claimed it.
     https://filemedia.net/43300/00002  If the account doesnt work it means someone already claimed it.
     https://filemedia.net/43300/00003  If the account doesnt work it means someone already claimed it.
     https://filemedia.net/43300/00004  If the account doesnt work it means someone already claimed it.
     https://direct-link.net/43300/00005  If the account doesnt work it means someone already claimed it.`
+    var words = string.split('\n');
+    let random = words[Math.floor(Math.random()*words.length)];
+    message.author.send(`${random}`);
+};
+};
+});
+client.on('message', message =>{
+    if (!message.guild) return;
+if (message.content === '=crunchyroll'){
+    if (usedCommandRecently4.has(message.author.id)){
+        message.channel.send('`Cooldown.. Please let other people get accounts.`')
+    } else{
+        usedCommandRecently4.add(message.author.id);
+        setTimeout(() =>{
+            usedCommandRecently4.delete(message.author.id);
+        }, 100000)
+    var string = 
+    `https://filemedia.net/43300/00006  If the account doesnt work it means someone already claimed it.`
     var words = string.split('\n');
     let random = words[Math.floor(Math.random()*words.length)];
     message.author.send(`${random}`);

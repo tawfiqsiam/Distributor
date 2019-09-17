@@ -83,7 +83,8 @@ if (message.content === '=spotify'){
     `https://filemedia.net/43300/00001 If the account doesnt work it means someone already claimed it.
     https://filemedia.net/43300/00002  If the account doesnt work it means someone already claimed it.
     https://filemedia.net/43300/00003  If the account doesnt work it means someone already claimed it.
-    https://filemedia.net/43300/00004  If the account doesnt work it means someone already claimed it.`
+    https://filemedia.net/43300/00004  If the account doesnt work it means someone already claimed it.
+    https://direct-link.net/43300/00005  If the account doesnt work it means someone already claimed it.`
     var words = string.split('\n');
     let random = words[Math.floor(Math.random()*words.length)];
     message.author.send(`${random}`);

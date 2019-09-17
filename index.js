@@ -21,9 +21,9 @@ client.on('message', msg =>{
 client.on('message', msg => {
     if (msg.content === '=invite') {
          let supportembed = new Discord.RichEmbed()
-         .setColor("#15f153")
-         .setField("Invite")
          .setDescription("Invite the bot here: https://discordapp.com/api/oauth2/authorize?client_id=622913750860562492&permissions=8&scope=bot")
+         .setColor("#15f153")
+         .addField("Invite")
 
          msg.reply(supportembed);
     }

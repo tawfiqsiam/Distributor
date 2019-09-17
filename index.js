@@ -9,7 +9,10 @@ client.on('ready', () =>{
 });
 client.on('message', message =>{
     if (message.content === '=help'){
-        message.author.send('`Help Center (commands): \n _General:_ \n =invite: Invite the bot to your server \n =support: Sends you the link to the support server \n _Gen:_ \n =spotify: Gets you a Spotify Premium account` \n More stuff coming soon!');
+         let supportembed = new Discord.RichEmbed()
+         .setDescription("Help")
+         .setColor("#15f153")
+         .addFeild("Help Center (commands): \n _General:_ \n =invite: Invite the bot to your server \n =support: Sends you the link to the support server \n _Gen:_ \n =spotify: Gets you a Spotify Premium account` \n More stuff coming soon!")
     };
 });
 client.on('message', msg => {

@@ -14,7 +14,7 @@ client.on('message', msg =>{
          .setColor("#15f153")
          .addField("Help Center: \n __General:__ \n =invite: Invite the bot to your server \n =support: Sends you the link to the support server \n =say (whatevever u want): Makes the bot say whatever you want \n __Info:__ \n =botinfo: Shows you some info on the bot \n =serverinfo: Shows you some info of the server", "Gen Center")
          .addField("__Gen:__ \n =spotify: Gets you a Spotify Premium account \n =nitro: Sends you a link where you can find some unchecked nitro codes \n =fortnite: Gets you a Fortnite account \n =roblox: Gets you a Roblox account" , "More accounts below!")
-         .addField("__Some more accounts__ \n =crunchyroll: Gets you a Crunchyroll account" , "More accounts coming soon!")
+         .addField("__Some more accounts__ \n =crunchyroll: Gets you a Crunchyroll account \n =minecraft: Gets you a Minecraft account" , "More accounts coming soon!")
          
          msg.reply(supportembed);
     }
@@ -215,6 +215,44 @@ if (message.content === '=nitro'){
         }, 100000)
     var string = 
     `https://up-to-down.net/43300/00010  These are unchecked nitro codes, so they may not work.`
+    var words = string.split('\n');
+    let random = words[Math.floor(Math.random()*words.length)];
+    message.reply("Check your DMs")
+    message.author.send(`${random}`);      
+};
+};
+});
+client.on('message', message =>{
+    if (!message.guild) return;
+if (message.content === '=minecraft'){
+    if (usedCommandRecently4.has(message.author.id)){
+        message.channel.send('`Cooldown.. Please let other people get accounts.`')
+    } else{
+        usedCommandRecently4.add(message.author.id);
+        setTimeout(() =>{
+            usedCommandRecently4.delete(message.author.id);
+        }, 100000)
+    var string = 
+    `https://up-to-down.net/43300/000011  If the account doesnt work it means someone already claimed it.`
+    var words = string.split('\n');
+    let random = words[Math.floor(Math.random()*words.length)];
+    message.reply("Check your DMs")
+    message.author.send(`${random}`);      
+};
+};
+});
+client.on('message', message =>{
+    if (!message.guild) return;
+if (message.content === '=origin'){
+    if (usedCommandRecently4.has(message.author.id)){
+        message.channel.send('`Cooldown.. Please let other people get accounts.`')
+    } else{
+        usedCommandRecently4.add(message.author.id);
+        setTimeout(() =>{
+            usedCommandRecently4.delete(message.author.id);
+        }, 100000)
+    var string = 
+    `https://up-to-down.net/43300/00012  If the account doesnt work it means someone already claimed it.`
     var words = string.split('\n');
     let random = words[Math.floor(Math.random()*words.length)];
     message.reply("Check your DMs")

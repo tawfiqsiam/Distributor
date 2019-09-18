@@ -12,7 +12,7 @@ client.on('message', msg =>{
          let supportembed = new Discord.RichEmbed()
          .setDescription("Help")
          .setColor("#15f153")
-         .addField("Help Center: \n __General:__ \n =invite: Invite the bot to your server \n =support: Sends you the link to the support server \n __Info:__ \n =botinfo: Shows you some info on the bot \n =serverinfo: Shows you some info of the server", "Gen Center")
+         .addField("Help Center: \n __General:__ \n =invite: Invite the bot to your server \n =support: Sends you the link to the support server \n =say (whatevever u want): Makes the bot say whatever you want \n __Info:__ \n =botinfo: Shows you some info on the bot \n =serverinfo: Shows you some info of the server", "Gen Center")
          .addField("__Gen:__ \n =spotify: Gets you a Spotify Premium account \n =nitro: Sends you a link where you can find some unchecked nitro codes \n =fortnite: Gets you a Fortnite account \n =roblox: Gets you a Roblox account" , "More accounts below!")
          .addField("__Some more accounts__ \n =crunchyroll: Gets you a Crunchyroll account" , "More accounts coming soon!")
          

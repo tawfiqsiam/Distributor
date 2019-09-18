@@ -122,4 +122,4 @@ client.on("message", async message => {
         }
     }
 });
-client.login('NjIyOTEzNzUwODYwNTYyNDky.XYKm6A.uGOMrBBzCsnbLVN63ZvIzkpZVFo');
+client.login(precess.env.BOT_TOKEN);

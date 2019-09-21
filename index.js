@@ -15,6 +15,7 @@ client.on('message', msg =>{
          .addField("Help Center: \n __General:__ \n =invite: Invite the bot to your server \n =support: Sends you the link to the support server \n =say (whatevever u want): Makes the bot say whatever you want \n __Info:__ \n =botinfo: Bot info \n =serverinfo: Server info", "Gen Center")
          .addField("__Gen:__ \n =spotify: Spotify Premium \n =nitro: Nitro \n =fortnite: Fortnite \n =roblox: Roblox" , "More accounts below!")
          .addField("__Some more accounts__ \n =crunchyroll: Crunchyroll \n =minecraft: Minecraft" , "More accounts coming soon!")
+         .addFeild("Join the support server for more info on resstoks: https://discord.gg/e9kzWCE" , "Just join it for fun/support....")
          
          msg.reply(supportembed);
     }

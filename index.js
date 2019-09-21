@@ -14,7 +14,7 @@ client.on('message', msg =>{
          .setColor("#15f153")
          .addField("Help Center: \n __General:__ \n =invite: Invite the bot to your server \n =support: Sends you the link to the support server \n =say (whatevever u want): Makes the bot say whatever you want \n __Info:__ \n =botinfo: Bot info \n =serverinfo: Server info", "Gen Center")
          .addField("__Gen:__ \n =spotify: Spotify Premium \n =nitro: Nitro \n =fortnite: Fortnite \n =roblox: Roblox" , "More accounts below!")
-         .addField("__Some more accounts__ \n =crunchyroll: Crunchyroll \n =hulu/origin: Hulu/Origin" , "More accounts coming soon! Join the support server for more info on resstocks: https://discord.gg/e9kzWCE")
+         .addField("__Some more accounts__ \n =crunchyroll/hulu=netflix: Crunchyroll, Hulu & Netflix \n =hulu/origin: Hulu/Origin" , "More accounts coming soon! Join the support server for more info on resstocks: https://discord.gg/e9kzWCE")
          
          msg.reply(supportembed);
     }
@@ -147,7 +147,7 @@ if (message.content === '=spotify'){
 });
 client.on('message', message =>{
     if (!message.guild) return;
-if (message.content === '=crunchyroll'){
+if (message.content === '=crunchyroll/hulu/netflix'){
     if (usedCommandRecently4.has(message.author.id)){
         message.channel.send('`Cooldown.. Please let other people get accounts.`')
     } else{
